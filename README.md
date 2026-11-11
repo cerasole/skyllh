@@ -56,6 +56,18 @@ where `[ref]` is a commit hash, branch name, or tag.
 conda install -c conda-forge skyllh
 ```
 
+To create a dedicated conda environment, and install the code in a editable mode, run:
+```bash
+conda env create -f environment.yml
+conda activate skyllh
+pip install -e .
+```
+
+If, when installing in editable mode, you wish to install also all additional dependencies:
+```bash
+pip install -e ".[dev,docs,extras]"
+```
+
 # Publications
 
 Several publications about the SkyLLH software are available:
